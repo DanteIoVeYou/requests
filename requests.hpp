@@ -10,7 +10,7 @@ public:
     void post() {}
 
 private:
-    std::string _url;                                     // url 地址
-    std::unordered_map<std::string, std::string> _data;   // url参数
-    std::unordered_map<std::string, std::string> _header; // 请求报头
+    std::string _url;                                         // url 地址
+    std::vector<std::pair<std::string, std::string>> _data;   // url参数
+    std::vector<std::pair<std::string, std::string>> _header; // 请求报头
 };

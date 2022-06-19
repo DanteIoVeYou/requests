@@ -1,6 +1,6 @@
 #pragma once
 #include "socket.hpp"
-
+static const std::string LF = "\r\n";
 class requests
 {
 public:
@@ -34,6 +34,11 @@ public:
     const std::string &headers()
     {
         return _headers;
+    }
+
+private:
+    void send()
+    {
     }
 
 private:

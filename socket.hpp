@@ -28,9 +28,11 @@ public:
         if (ret < 0)
         {
             // TODO
+            return false;
         }
         return true;
     }
+
     static std::string ParseIpByDomain(std::string url)
     {
         struct hostent *host = gethostbyname(url.c_str());

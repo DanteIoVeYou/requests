@@ -31,4 +31,23 @@ public:
         }
         return true;
     }
+    static std::string ParseIpByDomain(std::string url)
+    {
+        struct hostent *host = gethostbyname(url.c_str());
+        if (!host)
+        {
+            // Error
+        }
+        else
+        {
+            if (!host->h_addr_list[0])
+            {
+                // Cannot get ip
+            }
+            else
+            {
+                return inet_ntoa(*(struct in_addr *)host->h_addr_list[0]);
+            }
+        }
+    }
 };

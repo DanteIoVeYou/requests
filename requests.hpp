@@ -1,5 +1,6 @@
 #pragma once
 #include "socket.hpp"
+
 static const uint16_t PORT = 80;
 static const std::string LF = "\r\n";
 static const std::string SP = " ";
